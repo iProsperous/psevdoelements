@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.dflex {
+  display: flex;
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding-top: 8px;
+}
+
+li::before{
+  content: '';
+  display: inline-block;
+  height:18px;
+  width: 18px;
+  border-radius:50%;
+  background-color:#000;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+li:nth-child(2)::before{
+  background-color:orange;
+}
+
+li:nth-child(3)::before{
+  background-color:yellow;
+}
+
+li:nth-child(4)::before{
+  background-color:green;
+}
+
+li:nth-child(5)::before{
+  background-color:#00FFF0;
+}
+
+li:nth-child(6)::before{
+  background-color:blue;
+}
+
+li:nth-child(7)::before{
+  background-color:#7000FF;
+}
+
+.poetry{
+  counter-reset: number;
+  margin-left: 70px;
+  text-indent: -23px;
+}
+
+.poetry p::before {
+  counter-increment: number;
+  content: counter(number) " " "-";
+  font-weight: bold;
+  margin-right: 9px;
+}
+
+.lighthouse div:nth-child(n)::before {
+  content:'';
+  display: inline-block;
+  height: 60px;
+  width: 130px;
+  background-color: #000;
+  border: 1px solid #000;
+  margin-top: -5px;
+}
+
+.lighthouse div:nth-child(2n)::before {
+  background-color:white;
+  border: 1px solid #000;
+}
+
+.lighthouse div:nth-child(2n+3)::before {
+  background-color:red;
+  border: 1px solid red;
+}
+
+.lighthouse {
+  text-align: center;
+  margin-left: 150px;
+  position: relative;
+}
+
+.lighthouse div:nth-child(1)::after {
+  content:'';
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: yellow;
+  position: absolute;
+  left: 50%;
+  top:27px;
+  transform: translate(-50%, -50%);
+}
+
+.lighthouse div:nth-child(2)::before {
+  width: 150px;
+}
+
+.lighthouse div:nth-child(3)::before {
+  width: 170px;
+}
+
+.lighthouse div:nth-child(4)::before {
+  width: 190px;
+}
+
+.lighthouse div:nth-child(5)::before {
+  width: 210px;
+}
+
+.lighthouse div:nth-child(6)::before {
+  width: 250px;
+}
